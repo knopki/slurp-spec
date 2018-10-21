@@ -8,7 +8,7 @@
 
 Name:           slurp
 Version:        0.0.1
-Release:        1.git%{shortcommit}%{?dist}
+Release:        2.git%{shortcommit}%{?dist}
 Summary:        Select a region in a Wayland compositor and print it to the standard output.
 License:        MIT
 URL:            https://%{provider_prefix}
@@ -21,6 +21,7 @@ BuildRequires:  gcc
 BuildRequires:  meson
 BuildRequires:  cairo-devel
 BuildRequires:  wayland-devel
+BuildRequires:  wayland-protocols-devel
 
 %description
 %{summary}.
@@ -48,5 +49,8 @@ BuildRequires:  wayland-devel
 %{_mandir}/man1/slurp.1.gz
 
 %changelog
+* Sun Oct 21 2018 Sergey Korolev <korolev.srg@gmail.com> - 0.0.1-2.gitd907d30
+- Fix dependency
+
 * Sun Oct 21 2018 Sergey Korolev <korolev.srg@gmail.com> - 0.0.1-1.gitd907d30
 - Initial package
